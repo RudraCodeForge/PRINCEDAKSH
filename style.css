@@ -331,12 +331,12 @@ nav {
   padding: 10px;
   border: 1px solid white;
   font-family: 'Protest Guerrilla', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: none;
   -webkit-transition: 0.7s ease-in-out;
   -o-transition: 0.7s ease-in-out;
   transition: 0.7s ease-in-out;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .text a:hover {
@@ -495,7 +495,7 @@ footer {
 
 /*ALL MEDIA QUERY START*/
 /*LAPTOPS QUERY FOR STARTS*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 780px) {
   .hamburger {
     display: none;
   }
