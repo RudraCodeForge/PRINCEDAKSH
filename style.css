@@ -609,41 +609,59 @@ footer {
 /* MAIN PAGE DESIGN ENDS HERE*/
 
 /* PROJECT PAGE DESIGN START HERE */
-.BACK{
-  margin:10px;
+.BACK {
+  margin: 10px;
   text-transform: capitalize;
   cursor: pointer;
   padding: 10px;
   font-family: 'Protest Guerrilla', sans-serif;
   border-radius: 10px;
-  
   margin-top: 10px;
   color: #778ba5;
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
 }
-.LOGO{
+
+.LOGO {
   padding: 20px;
   font-family: 'Protest Guerrilla', sans-serif;
-  color:#778ba5;
+  color: #778ba5;
 }
-.LOGO b{
+
+.LOGO b {
   font-family: 'Protest Guerrilla', sans-serif;
 }
 
-.projects{
-  margin:100px auto;
-  width:95%;
-  padding:10px;
+#languageSelect {
+  margin: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 10px;
+  font-size:1rem;
+  font-family: 'Protest Guerrilla', sans-serif;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #778ba5;
+  border:none;
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
 }
+
+.projects {
+  margin: 0 auto;
+  margin-top:100px;
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
 .cardcontainer {
   width: 350px;
   height: 500px;
   perspective: 800px;
-  margin:5px;
+  margin: 2rem auto;
 }
 
-.cardcontainer:hover > .card {
+.cardcontainer:hover>.card {
   cursor: pointer;
   transform: rotateY(180deg);
 }
@@ -663,13 +681,27 @@ footer {
   border-radius: 2rem;
   position: absolute;
   backface-visibility: hidden;
+
 }
-.front{
-  padding:10px;
-  background-color:#787ff6;
+
+.front {
+  background-size: cover;
+  text-align: center;
 }
+
+.front h1 {
+  margin-top: 72%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0 4px 30px 30px;
+  height: 50%;
+  font-family: 'Protest Guerrilla', sans-serif;
+  color: #778ba5;
+}
+
 .back {
-  background-color: #FE7235;
+  text-align: center;
+  padding: 10px;
+  background-color: #F0F8FF;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -677,10 +709,41 @@ footer {
   align-items: center;
   gap: 5rem;
 }
-@media screen and (min-width: 768px){
-  .projects{
-    display:flex;
-    justify-content: space-between;
-    
+
+.back h1 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  color: #778ba5
+}
+.back a{
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  margin-right: 20px;
+}
+.back a:hover{
+  color: white;
+  background-color: #787FF6;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line */
+    justify-content: space-around;
+    padding: 10px;
   }
+
+}
+.content {
+  display: none;
 }
