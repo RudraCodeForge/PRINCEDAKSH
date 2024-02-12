@@ -20,3 +20,7 @@ function menu() {
 function clearForm() {
   document.getElementById("contact-form").reset();
 }
+function BACK() {
+   window.history.back();
+}
+
