@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -21,39 +29,76 @@ body {
   position: fixed;
   z-index: 999;
   top: 0;
+  -webkit-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
   transition: all ease 0.7s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 #loader h1 {
   font-size: 14vw;
   color: transparent;
+  background: -webkit-gradient(linear, left top, right top, from(orange), to(orangered));
+  background: -o-linear-gradient(left, orange, orangered);
   background: linear-gradient(to right, orange, orangered);
+  -webkit-background-clip: text;
   background-clip: text;
   position: absolute;
   opacity: 0;
+  -webkit-animation-name: load;
   animation-name: load;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 
 #loader h1:nth-child(1) {
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 #loader h1:nth-child(2) {
+  -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
 
 #loader h1:nth-child(3) {
+  -webkit-animation-delay: 3s;
   animation-delay: 3s;
 }
 
 #loader h1:nth-child(4) {
+  -webkit-animation-delay: 4s;
   animation-delay: 4s;
+}
+
+@-webkit-keyframes load {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes load {
@@ -81,14 +126,19 @@ body {
   width: 100%;
   top: 0;
   position: fixed;
-  z-index:400;
+  z-index: 400;
   background-color: #eee;
 }
 
 nav {
   border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
 }
@@ -117,11 +167,15 @@ nav {
   border: 1px solid #4adede;
   border-radius: 10px;
   margin: 6px 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 /* Rotate first bar */
 .change :nth-child(1) {
+  -webkit-transform: translate(0, 11px) rotate(-45deg);
+  -ms-transform: translate(0, 11px) rotate(-45deg);
   transform: translate(0, 11px) rotate(-45deg);
 }
 
@@ -132,6 +186,8 @@ nav {
 
 /* Rotate last bar */
 .change :nth-child(3) {
+  -webkit-transform: translate(0, -11px) rotate(45deg);
+  -ms-transform: translate(0, -11px) rotate(45deg);
   transform: translate(0, -11px) rotate(45deg);
 }
 
@@ -142,10 +198,17 @@ nav {
   width: 0px;
   height: 100%;
   z-index: 998;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  -webkit-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
   transition: all ease 0.7s;
   background-color: #eee;
   /* White with 50% transparency */
@@ -173,12 +236,17 @@ nav {
   width: 95%;
   height: 50px;
   text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
   list-style: none;
   font-family: 'Protest Guerrilla', sans-serif;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
   transition: 0.7s ease-in-out;
   cursor: pointer;
 
@@ -194,6 +262,8 @@ nav {
 }
 
 .laptopmenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   margin-top: 8px;
@@ -215,7 +285,10 @@ nav {
   padding: 10px;
   margin: 10px;
   border: 1px solid #f7f7f7;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
   font-family: 'Protest Guerrilla', sans-serif;
@@ -230,9 +303,10 @@ nav {
   background-color: #eee;
   color: white;
   width: 100%;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
-  height: 80vh;
+  height: 70vh;
 }
 
 .text {
@@ -250,7 +324,9 @@ nav {
   font-family: 'Protest Guerrilla', sans-serif;
 
 }
+
 .text a {
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
   padding: 10px;
@@ -258,6 +334,8 @@ nav {
   font-family: 'Protest Guerrilla', sans-serif;
   font-size: 40px;
   text-decoration: none;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
   transition: 0.7s ease-in-out;
   margin-right: 20px;
 }
@@ -272,49 +350,61 @@ nav {
 
 /* SKILLS PAGE DESIGN STARS HERE */
 
-.SKILLS{
+.SKILLS {
   border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
-  padding:10px;
-  border-radius:10px;
+  padding: 10px;
+  border-radius: 10px;
   background-color: #F0F8FF;
-  margin:0 auto;
-  text-align:center;
-  width:95%;
+  margin: 20px auto;
+  text-align: center;
+  width: 95%;
 }
-.SKILLS h1{
-  color:#787;
+
+.SKILLS h1 {
+  color: #787;
   font-family: 'Protest Guerrilla', sans-serif;
-  font-size :40px;
+  font-size: 40px;
 }
+
 .container {
   border: 1px solid white;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
-  padding:10px;
-  margin-top:20px;
-  border-radius:10px;
-  background-color:#eee;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #eee;
 }
+
 .assum {
-  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-.SNAME{
-  text-align:left;
-  color:#787;
+
+.SNAME {
+  text-align: left;
+  color: #787;
   font-family: 'Protest Guerrilla', sans-serif;
   font-size: calc(1vw + 20px);
 }
+
 .progress-container {
   width: 100%;
   height: 20px;
-  margin:0 auto;
+  margin: 0 auto;
   background-color: #eee;
   position: relative;
   overflow: hidden;
   border: 2px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .progress-bar {
@@ -323,10 +413,13 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transition: width 0.7s;
+  -o-transition: width 0.7s;
   transition: width 0.7s;
   border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 
@@ -335,8 +428,9 @@ nav {
 /* CONTACT FORM DESIGN START HERE*/
 .contact {
   text-align: center;
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 95%;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
   margin-bottom: 10px;
@@ -347,19 +441,22 @@ nav {
   font-family: 'Protest Guerrilla', sans-serif;
   color: #787FF6;
   margin-top: 15px;
-  font-size :40px;
+  font-size: 40px;
 }
 
 #name,
 #email,
 #message {
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
   border: 2px solid white;
   padding: 10px;
   background-color: #eee;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
-  width:90%;
+  width: 90%;
 }
 
 #name:focus,
@@ -370,6 +467,7 @@ nav {
 
 .SForm {
   color: #787FF6;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
   padding: 10px;
@@ -378,9 +476,11 @@ nav {
   font-size: 40px;
   margin-right: 10px;
   text-decoration: none;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
   transition: 0.7s ease-in-out;
   margin-bottom: 10px;
-  width:45%;
+  width: 45%;
 }
 
 .SForm:hover {
@@ -394,14 +494,16 @@ nav {
 
 footer {
   text-align: center;
+  margin-top:2rem;
   border: 1px solid white;
-  font-family: 'Protest Guerrilla', sans-serif;
+  font-family:'Protest Guerrilla', sans-serif;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
 }
 
 
 /*ALL MEDIA QUERY START*/
 /*LAPTOPS QUERY FOR STARTS*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 815px) {
   .hamburger {
     display: none;
   }
@@ -410,22 +512,28 @@ footer {
     margin-top: 60px;
     background-color: #eee;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+    -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
     box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
     border-radius: 10px;
-    height: 100vh;
   }
 
   .image {
     display: block;
     margin-right: 20px;
     height: 400px;
+    width:500px;
     border: 5px solid white;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 7px 7px 17px cyan, -7px -7px 17px rgba(70, 70, 70, 0.15);
+    -webkit-box-shadow: 7px 7px 17px #fff, -7px -7px 17px rgba(70, 70, 70, 0.15);
+    box-shadow: 7px 7px 17px #fff, -7px -7px 17px rgba(70, 70, 70, 0.15);
   }
 
   .image2 {
@@ -445,7 +553,7 @@ footer {
 /* LAPTOP MEDIA QUERY ENDS HERE */
 
 /* MOBILE MEDIA QUERY STARTS HERE*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
   .image {
     display: none;
   }
@@ -459,13 +567,13 @@ footer {
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #f7f7f7;
+    -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
     box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   }
 
   #landing {
     text-align: center;
     font-weight: 70px;
-    height: 80vh;
     padding-top: 10px;
   }
 
@@ -499,3 +607,80 @@ footer {
 /* ALL MEDIA QUERY ENDS HERE */
 
 /* MAIN PAGE DESIGN ENDS HERE*/
+
+/* PROJECT PAGE DESIGN START HERE */
+.BACK{
+  margin:10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 10px;
+  font-family: 'Protest Guerrilla', sans-serif;
+  border-radius: 10px;
+  
+  margin-top: 10px;
+  color: #778ba5;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+.LOGO{
+  padding: 20px;
+  font-family: 'Protest Guerrilla', sans-serif;
+  color:#778ba5;
+}
+.LOGO b{
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+
+.projects{
+  margin:100px auto;
+  width:95%;
+  padding:10px;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+.cardcontainer {
+  width: 350px;
+  height: 500px;
+  perspective: 800px;
+  margin:5px;
+}
+
+.cardcontainer:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front{
+  padding:10px;
+  background-color:#787ff6;
+}
+.back {
+  background-color: #FE7235;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+@media screen and (min-width: 768px){
+  .projects{
+    display:flex;
+    justify-content: space-between;
+    
+  }
+}
