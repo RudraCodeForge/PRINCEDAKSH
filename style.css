@@ -527,11 +527,13 @@ footer {
 
   .image {
     display: block;
-    margin-right: 20px;
+    margin: 20px 10px;
     height: 400px;
-    width:500px;
+    width: 300px;
+    background-image:url("pic.jpg");
+    background-size: cover;
     border: 5px solid white;
-    border-radius: 50%;
+    border-radius: 10%;
     overflow: hidden;
     -webkit-box-shadow: 7px 7px 17px #fff, -7px -7px 17px rgba(70, 70, 70, 0.15);
     box-shadow: 7px 7px 17px #fff, -7px -7px 17px rgba(70, 70, 70, 0.15);
