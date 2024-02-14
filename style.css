@@ -644,6 +644,9 @@ footer {
     display: block;
   }
 }
+.data{
+  display:none;
+}
 
 /* MOBILE MEDIA QUERY ENDS HERE */
 
