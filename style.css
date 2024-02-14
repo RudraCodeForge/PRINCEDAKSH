@@ -722,6 +722,84 @@ footer {
 /* MEDIA QUERY FOR LOCK ORIENTATION*/
 /* ALL MEDIA QUERY ENDS HERE */
 
+/* INDEX PAGE DARK MODE DESIGN START HERE*/
+
+.dark-mode .mobilemenu {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .mobilemenu a {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode #landing {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+}
+
+.dark-mode #landing a {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .laptopmenu ul li a {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .SKILLS {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .SKILLS .container {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .container {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .progress-container {
+  box-shadow: none;
+}
+
+.dark-mode .contact {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode #name {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode #email {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode #message {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode .SForm {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+/* DARK MODE DESIGN FOR INDEX PAGE ENDS HERE*/
 /* MAIN PAGE DESIGN ENDS HERE*/
 
 /* PROJECT PAGE DESIGN START HERE */
