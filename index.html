@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>PRINCE DAKSH</title>
+  <title>PRINCEDAKSH</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -13,8 +13,8 @@
 </head>
 
 <body>
-  <!-- LOADER DESIGN START HERE -->
-  <div id="loader">
+   <!--LOADER DESIGN START HERE -->
+   <div id="loader">
     <h1><i class="fa-solid fa-utensils"></i> EAT</h1>
     <h1><i class="fa-solid fa-bed"></i> SLEEP</h1>
     <h1><i class="fa-solid fa-code"></i> CODE</h1>
@@ -37,7 +37,7 @@
         <ul>
           <li><a href="#"><i class="fa-solid fa-house"></i> HOME</a></li>
           <li><a href="#"><i class="fa-solid fa-address-card"></i> ABOUT ME</a></li>
-          <li><a href="projects.html"><i class="fa-solid fa-file-code"></i> PROJECT</a></li>
+          <li><a href="Project.html"><i class="fa-solid fa-file-code"></i> PROJECT</a></li>
           <li><a href="#">
               <i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
           <li><a href="mailto: jitandradaksh533@gmail.com?subject=From%20Your%20Website"><i
@@ -49,7 +49,7 @@
       <ul class="links">
         <li><a href="#"><i class="fa-solid fa-house"></i> HOME</a></li>
         <li><a href="#"><i class="fa-solid fa-address-card"></i> ABOUT ME</a></li>
-        <li><a href="projects.html"><i class="fa-solid fa-file-code"></i> PROJECT</a></li>
+        <li><a href="Project.html"><i class="fa-solid fa-file-code"></i> PROJECT</a></li>
         <li><a href="#">
             <i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
         <li><a href="mailto: jitandradaksh533@gmail.com?subject=From%20Your%20Website"><i
@@ -75,6 +75,7 @@
           <a href="#" class="HIRE">HIRE ME</a>
         </div>
       </div>
+      
       <div class="box">
         <div class="data">
           <img src="pic2.jpg" />
@@ -82,6 +83,8 @@
           <a href="" class="btn">HIRE ME</a>
         </div>
       </div>
+
+      
     </section>
   </section>
   <!-- LANDING PAGE ENDS HERE -->
@@ -98,7 +101,7 @@
         <div class="progress-bar" style="width: 90%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">CSS</span>
@@ -108,7 +111,7 @@
         <div class="progress-bar" style="width: 85%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">JAVASCRIPT</span>
@@ -118,7 +121,7 @@
         <div class="progress-bar" style="width: 70%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">PYTHON</span>
@@ -128,7 +131,7 @@
         <div class="progress-bar" style="width: 87%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">C++</span>
@@ -138,7 +141,7 @@
         <div class="progress-bar" style="width: 89%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">C PROGRAMMING</span>
@@ -148,7 +151,7 @@
         <div class="progress-bar" style="width: 94%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">JAVA</span>
@@ -158,7 +161,7 @@
         <div class="progress-bar" style="width: 40%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">DIVOPS</span>
@@ -168,7 +171,7 @@
         <div class="progress-bar" style="width: 65%;"></div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="assum">
         <span class="SNAME">LINUX</span>
@@ -207,29 +210,30 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function () {
-      emailjs.init("-E5HO-T9pUBXkXIk5");
-    })();
+  emailjs.init("-E5HO-T9pUBXkXIk5");
+})();
 
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-      event.preventDefault();
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+  event.preventDefault();
 
-      var formData = {
-        to_name: "PRINCE DAKSH",
-        name: this.name.value,
-        email_id: this.email.value,
-        message: this.message.value
-      };
+  var formData = {
+    to_name: "PRINCE DAKSH",
+    name: this.name.value,
+    email_id: this.email.value,
+    message: this.message.value
+  };
 
-      emailjs.send("service_81xo1t9", "template_od3tksj", formData)
-        .then(function (response) {
-          console.log('Success!', response.status, response.text);
-          alert('Message sent successfully!');
-          document.getElementById('contact-form').reset();
-        }, function (error) {
-          console.log('Failed!', error);
-          alert('Message failed to send. Please try again later.');
-        });
+  emailjs.send("service_81xo1t9", "template_od3tksj", formData)
+    .then(function (response) {
+      console.log('Success!', response.status, response.text);
+      alert('Message sent successfully!');
+      document.getElementById('contact-form').reset();
+    })
+    .catch(function (error) {
+      console.log('Failed!', error);
+      alert('Message failed to send. Please try again later.');
     });
+});
   </script>
   <!-- JS CODE FOR FORM TRANSFER ENDS HERE -->
 
