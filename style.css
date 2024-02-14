@@ -936,12 +936,57 @@ footer {
     display: flex;
     flex-wrap: wrap;
     /* Allows items to wrap to the next line */
+    
     justify-content: space-around;
+    
     padding: 10px;
+    
   }
+  
 
 }
 .content {
   display: none;
 }
-    
+/*DARK MODE DESIGN FOR PROJECT PAGE START HERE*/
+.dark-mode {
+  background: #232427;
+}
+
+.dark-mode nav {
+  background: #232427;
+  border: none;
+  box-shadow: -7px -7px 17px black, 7px 7px 17px black
+    /*rgba(255, 255, 255, 0.2)*/
+  ;
+}
+
+.dark-mode .BACK {
+
+  background: #232427;
+  box-shadow: -5px -5px 15px black, 5px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode #languageSelect {
+  /*border:2px solid black;*/
+  background: #232427;
+  box-shadow: -5px -5px 15px black, 5px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode footer {
+  border: 2px solid black;
+  background: #232427;
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.dark-mode button:hover {
+  box-shadow: none;
+}
+
+.dark-mode .projects {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+/*DARK MODE DESIGN FOR PROJECT PAGE ENDS HERE*/    
