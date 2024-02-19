@@ -990,4 +990,72 @@ footer {
   box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
 }
 
-/*DARK MODE DESIGN FOR PROJECT PAGE ENDS HERE*/    
+/*DARK MODE DESIGN FOR PROJECT PAGE ENDS HERE*/   
+/*ABOUT ME PAGE DESIGN START HERE*/
+.aboutme {
+  margin-top: 100px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+.AC {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.AI {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  width: 250px;
+  background-image: url('me.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 250px;
+  z-index: 50;
+
+}
+.AT {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  background: #787FF6;
+  height: 200px;
+}
+.at{
+  margin:20px auto;
+  text-align:center;
+  margin-left:100px;
+  color: white;
+}
+.at h1{
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.at p{
+  margin-right:10px;
+  margin-top:10px;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.SA{
+  height: 250px;
+}
+.GAP{
+  margin-top:50px;
+}
+.SAT{
+  margin-left:10px;
+}
+.SAT details {
+  text-align:left;
+  margin-top:5px;
+  
+}
+.SAT details summary{
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.dark-mode .aboutme{
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+/*About PAGE DESIGN ENDS HERE*/
