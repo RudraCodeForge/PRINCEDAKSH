@@ -40,3 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('dark-mode');
   }
 });
+
+function RELOAD(){
+  window.location.reload();
+}
