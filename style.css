@@ -332,6 +332,7 @@ nav {
   box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
   border-radius: 10px;
   padding: 10px;
+  color:#787FF6;
   border: 1px solid white;
   font-family: 'Protest Guerrilla', sans-serif;
   font-size: 40px;
@@ -360,8 +361,9 @@ nav {
   border-radius: 10px;
   background-color: #F0F8FF;
   margin: 20px auto;
+  margin-top:100px;
   text-align: center;
-  width: 95%;
+  width: 100%;
 }
 
 .SKILLS h1 {
