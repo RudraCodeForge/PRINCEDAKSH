@@ -1051,8 +1051,7 @@ footer {
 }
 .SAT details {
   text-align:left;
-  margin-top:5px;
-  
+  margin-top:5px;  
 }
 .SAT details summary{
   font-family: 'Protest Guerrilla', sans-serif;
@@ -1060,4 +1059,60 @@ footer {
 .dark-mode .aboutme{
   box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
 }
+
+/* SOCIAL MEDIA DESIGN START HERE */
+.foot{
+  text-align:left;
+}
+.Social {
+  color: #0087ca;
+  margin:10px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;  
+}
+.Social span{
+  font-size:20px;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.cop{
+  text-align: center;
+  font-family: 'Protest Guerrilla', sans-serif;
+  width:100%;
+  border:1px solid black;
+}
+
+.Social::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.Social:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.fcon{
+  display:flex; 
+  padding:5px;
+}
+.slink-container{
+  width:50%;
+}
+.address{
+  width:50%;
+}
+.address a{
+  font-size:20px;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+/* SOCIAL MEDIA DESIGN ENDS HERE*/
+
 /*About PAGE DESIGN ENDS HERE*/
