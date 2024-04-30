@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>PROJECTS</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+  <section class="navbar">
+    <nav>
+      <span class="BACK" onclick="BACK()"><i class="fa-solid fa-left-long"></i> BACK</span>
+      <span class="LOGO">PRINCE<b>DAKSH</b></span>
+      <!--select option -->
+      <select id="languageSelect" onchange="showContent()">
+        <option value="all" selected>All</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="c">C</option>
+        <option value="web">WEBDEV.</option>
+      </select>
+    </nav>
+  </section>
+  <section class="projects">
+
+    <div class="pythonContent content python">
+      <div class="cardcontainer">
+        <div class="card">
+          <div class="front" style="background-image: url('p1.png');">
+            <h1>
+              STONE, PAPER, SECCORS PROJECT IN PYTHON.<br>HOVER FOR MORE...
+            </h1>
+          </div>
+          <div class="back">
+            <h1>STONE,PAPER,SECCORS IS MINOR PROJECT THIS PROJECT IS WRITTEN IN PYTHON I CAN PROVIDE TWO OPTIONS IN IT
+              PLAY WITH FRIEND OR PLAY WITH COMPUTER . FOR SOURCE CODE CLICK THE BELOW LINK</h1>
+            <a href="#">SOURCE CODE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pythonContent content python">
+      <div class="cardcontainer">
+        <div class="card">
+          <div class="front" style="background-image: url('p2.jpg');">
+            <h1>
+              YOUTUBE VIDEO DOWNLOADER PROJECT IN PYTHON.<br>HOVER FOR MORE...
+            </h1>
+          </div>
+          <div class=" back">
+            <h1>THIS PROJECT IS CREATE FOR DOWNLOAD VIDEO IN YOUTUBE YOU NEED TO JUST PASTE THE LINK AND DOWNLOAD THE
+              YOUTUBE VIDEO I CAN USE THE PYTUBE MODULE FOR CONNECTING YOUTUBE TO PYTHON AND TKINTER FOR PYTHON
+              GUI PROGRAM FOR SOURCE CODE CLICK THE BUTTON BELLOW</h1><a
+              href="https://github.com/RudraCodeForge/Pythonproject/blob/main/YouTube%20downloader%20tkinter.py">SOURCE
+              CODE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="webContent content python">
+      <div class="cardcontainer">
+        <div class="card">
+          <div class="front" style="background-image: url('p3.jpg');">
+            <h1>
+              A GAME WEBSITE WHERE USER CAN CHOOSE A NUMBER AND WEATING A RESULT.<br>HOVER FOR MORE....
+            </h1>
+          </div>
+          <div class=" back">
+            <h1>THIS PROJECT IS A IDEA ON SATTA KING WEBSITE WHERE USER CAN BET AMOUNT ON NUMBER AND WAITING FOR THE THE
+              RESULT I TRY MAKE IT EASIER THROUGH THE FRONTEND.I CAN ALSO LINK BACKED AS SOON AS POSSIBLE FOR SOURCE
+              CODE CLICK THE BUTTON BELLOW</h1><a href="https://rudracodeforge.github.io/MoneyMakers/">SOURCE
+              CODE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <footer>&copy COPYRIGHT BY PRINCE DAKSH</footer>
+  <script src="script.js"></script>
+  <script>
+    showContent();
+    function showContent() {
+      var selectedLanguage = document.getElementById("languageSelect").value;
+      var allContent = document.querySelectorAll(".content");
+
+      if (selectedLanguage === "all") {
+        allContent.forEach(function (content) {
+          content.style.display = "block";
+        });
+      } else {
+        allContent.forEach(function (content) {
+          content.style.display = "none";
+        });
+        var selectedContent = document.querySelectorAll("." + selectedLanguage + "Content");
+        selectedContent.forEach(function (content) {
+          content.style.display = "block";
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>

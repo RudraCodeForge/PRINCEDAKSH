@@ -1,0 +1,1125 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #eee;
+  overflow: auto;
+}
+
+/* LOADER DESIGN STARTS */
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  -webkit-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
+  transition: all ease 0.7s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#loader h1 {
+  font-size: 14vw;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, right top, from(orange), to(orangered));
+  background: -o-linear-gradient(left, orange, orangered);
+  background: linear-gradient(to right, orange, orangered);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: absolute;
+  opacity: 0;
+  -webkit-animation-name: load;
+  animation-name: load;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+#loader h1:nth-child(1) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+#loader h1:nth-child(2) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+#loader h1:nth-child(3) {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+#loader h1:nth-child(4) {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+@-webkit-keyframes load {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* LOADER DESIGN ENDS */
+
+/* NAVBAR DESIGN STARTS */
+.navbar {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 400;
+  background-color: #eee;
+}
+
+nav {
+  border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+}
+
+.logo {
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 10px;
+  font-family: 'Protest Guerrilla', sans-serif;
+  margin-top: 10px;
+  color: #778ba5;
+}
+
+.logo b {
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+
+.hamburger {
+  padding: 10px;
+}
+
+.bars {
+  background-color: #4adede;
+  width: 35px;
+  height: 5px;
+  border: 1px solid #4adede;
+  border-radius: 10px;
+  margin: 6px 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* Rotate first bar */
+.change :nth-child(1) {
+  -webkit-transform: translate(0, 11px) rotate(-45deg);
+  -ms-transform: translate(0, 11px) rotate(-45deg);
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change :nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change :nth-child(3) {
+  -webkit-transform: translate(0, -11px) rotate(45deg);
+  -ms-transform: translate(0, -11px) rotate(45deg);
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.mobilemenu {
+  position: fixed;
+  display: block;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  z-index: 998;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  -webkit-transition: all ease 0.7s;
+  -o-transition: all ease 0.7s;
+  transition: all ease 0.7s;
+  background-color: #eee;
+  /* White with 50% transparency */
+}
+
+.open {
+  width: 100%
+}
+
+.links {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.mobilemenu ul li a {
+  text-decoration: none;
+  color: #4adede;
+  font-size: 25px;
+  display: block;
+  padding: 11px;
+  margin: 2.5% 10px;
+  width: 95%;
+  height: 50px;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  list-style: none;
+  font-family: 'Protest Guerrilla', sans-serif;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+
+}
+
+.mobilemenu ul li a:hover {
+  color: white;
+  background-color: #787ff6;
+}
+
+.laptopmenu {
+  display: none;
+}
+
+.laptopmenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.laptopmenu ul li {
+  padding: 5px;
+}
+
+.laptopmenu ul li a:hover {
+  color: #4adede;
+  background-color: white;
+}
+
+.laptopmenu ul li a {
+  text-decoration: none;
+  color: white;
+  background-color: #787ff6;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #f7f7f7;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  font-family: 'Protest Guerrilla', sans-serif;
+  cursor: pointer;
+}
+
+/* NAVBAR DESIGN ENDS HERE */
+
+/* LANDING PAGE DESIGN START HERE */
+#landing {
+  margin-top: 60px;
+  background-color: #eee;
+  color: white;
+  width: 100%;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  height: 100%;
+  padding-bottom: 10px;
+
+}
+
+.text {
+  margin: 50px 20px;
+  color: #778ba5;
+  font-size: clamp(1.1rem, 1.0774rem + 1.3936vw, 3.265rem);
+}
+
+.text h1 {
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+
+#element {
+  color: #FE7235;
+  font-family: 'Protest Guerrilla', sans-serif;
+
+}
+
+.text a {
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  color: #787ff6;
+  padding: 10px;
+  border: 1px solid white;
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  margin-right: 20px;
+}
+
+.text a:hover {
+  color: white;
+  background-color: #787FF6;
+  cursor: pointer;
+}
+
+/* LANDING PAGE DESIGN ENDS HERE */
+
+/* SKILLS PAGE DESIGN STARS HERE */
+
+.SKILLS {
+  border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #F0F8FF;
+ /* background: #787FF6;*/
+  margin: 20px auto;
+  margin-top:100px;
+  text-align: center;
+  width: 100%;
+}
+
+.SKILLS h1 {
+  color: #787;
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 40px;
+}
+
+.container {
+  border: 1px solid white;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.assum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.SNAME {
+  text-align: left;
+  color: #787;
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: calc(1vw + 20px);
+}
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  margin: 0 auto;
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #FE7235;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: width 0.7s;
+  -o-transition: width 0.7s;
+  transition: width 0.7s;
+  border: 1px solid #f7f7f7;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+}
+
+
+/* SKILLS PAGE DESIGN ENDS HERE */
+
+/* CONTACT FORM DESIGN START HERE*/
+.contact {
+  text-align: center;
+  margin: 2rem auto;
+  width: 95%;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+}
+
+.contact h2 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  color: #787FF6;
+  margin-top: 15px;
+  font-size: 40px;
+}
+
+#name,
+#email,
+#message {
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  border: 2px solid white;
+  padding: 10px;
+  background-color: #eee;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  width: 90%;
+}
+
+#name:focus,
+#email:focus,
+#message:focus {
+  outline-color: #787ff6;
+}
+
+.SForm {
+  color: #787FF6;
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 40px;
+  margin-right: 10px;
+  text-decoration: none;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  margin-bottom: 10px;
+  width: 45%;
+}
+
+.SForm:hover {
+  color: white;
+  background-color: #787FF6;
+  cursor: pointer;
+}
+
+/* CONTACT FORM DESIGN ENDS HERE */
+
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  border: 1px solid white;
+  font-family: 'Protest Guerrilla', sans-serif;
+  width: 100%;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+/*ALL MEDIA QUERY START*/
+/*LAPTOPS QUERY FOR STARTS*/
+@media screen and (min-width: 815px) {
+
+  .hamburger,
+  .HIRE {
+    display: none;
+  }
+
+  #landing {
+    margin-top: 60px;
+    background-color: #eee;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 10px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+    border-radius: 10px;
+  }
+
+  .text {
+    width: 45%
+  }
+
+  .box {
+    margin: 50px auto;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .box:before {
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg, #00ccff, #d400d4);
+    animation: ring 4s linear infinite;
+  }
+
+  .box:hover::before {
+    inset: -20px 0px;
+  }
+
+
+  @keyframes ring {
+
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+
+  }
+
+  .box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .dark-mode .box::after {
+    background: #232427;
+  }
+
+  .data {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #fff;
+    z-index: 5;
+    border-radius: 50%;
+    background-color: #162052;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .data img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .box:hover .data img {
+    opacity: 0;
+  }
+
+  .data h2 {
+    position: relative;
+    font-size: 1.5em;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .data h2 span {
+    font-weight: 300;
+    font-size: 0.75em;
+    font-family: 'Protest Guerrilla', sans-serif;
+  }
+
+  .data a {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #070a1c;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    font-family: 'Protest Guerrilla', sans-serif;
+    transition: 0.5s;
+  }
+
+  .data a:hover {
+    cursor: pointer;
+    letter-spacing: 0.2em;
+
+  }
+
+  .image2 {
+    display: none;
+  }
+
+  .pic {
+    margin-right: 50px;
+
+  }
+
+  .laptopmenu {
+    display: block;
+  }
+
+  .switch {
+    margin: none;
+  }
+}
+
+/* LAPTOP MEDIA QUERY ENDS HERE */
+
+/* MOBILE MEDIA QUERY STARTS HERE*/
+@media screen and (max-width: 815px) {
+  .box {
+    display: none;
+  }
+
+  .image2 {
+    display: block;
+    margin: 0px auto;
+    padding: 20px 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #f7f7f7;
+    -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+    box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  }
+
+  .dark-mode .image2 {
+    box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  }
+
+  #landing {
+    text-align: center;
+    font-weight: 70px;
+    padding-top: 10px;
+  }
+
+  #try {
+    padding: 5%;
+  }
+
+  .text a {
+    font-size: 20px;
+  }
+}
+
+/* MOBILE MEDIA QUERY ENDS HERE */
+/* MEDIA QUERY FOR LANDSCAPE ORIENTATION*/
+
+/*@media (orientation: landscape) {
+  #landing {
+    text-align: center;
+    font-weight: 70px;
+  }
+
+  .mobilemenu {
+    display: none;
+  }
+
+}*/
+
+/* MEDIA QUERY FOR LOCK ORIENTATION*/
+/* ALL MEDIA QUERY ENDS HERE */
+
+/* DARK MODE DESIGN FOR INDEX PAGE START HERE */
+
+.dark-mode .mobilemenu {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .mobilemenu a {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode #landing {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+}
+
+.dark-mode #landing a {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .laptopmenu ul li a {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .SKILLS {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .SKILLS .container {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .container {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  border: none;
+}
+
+.dark-mode .progress-container {
+  box-shadow: none;
+}
+
+.dark-mode .contact {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode #name {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode #email {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode #message {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+.dark-mode .SForm {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+  background: #232427;
+  color: white;
+}
+
+/* DARK MODE DESIGN FOR INDEX PAGE ENDS HERE*/
+/* MAIN PAGE DESIGN ENDS HERE*/
+
+/* PROJECT PAGE DESIGN START HERE */
+.BACK {
+  margin: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 10px;
+  font-family: 'Protest Guerrilla', sans-serif;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: white;
+  border:1px solid white ;
+  background:#787FF6;
+  transition:0.5s ease;
+}
+.BACK:hover{
+  background: white;
+  color:#787FF6;
+  border:1px solid #FE7235;
+}
+.LOGO {
+  padding: 20px;
+  font-family: 'Protest Guerrilla', sans-serif;
+  color: #778ba5;
+}
+
+.LOGO b {
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+
+#languageSelect {
+  margin: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Protest Guerrilla', sans-serif;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: #778ba5;
+  border: none;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+.projects {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+.cardcontainer {
+  width: 350px;
+  height: 500px;
+  perspective: 800px;
+  margin: 2rem auto;
+}
+
+.cardcontainer:hover>.card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  position: absolute;
+  backface-visibility: hidden;
+
+}
+
+.front {
+  background-size: cover;
+  text-align: center;
+}
+
+.front h1 {
+  margin-top: 72%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0 4px 30px 30px;
+  height: 50%;
+  font-family: 'Protest Guerrilla', sans-serif;
+  color: #778ba5;
+}
+
+.back {
+  text-align: center;
+  padding: 10px;
+  background-color: #F0F8FF;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.back h1 {
+  font-family: 'Protest Guerrilla', sans-serif;
+  color: #778ba5
+}
+
+.back a {
+  -webkit-box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+  -webkit-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+  margin-right: 20px;
+}
+
+.back a:hover {
+  color: white;
+  background-color: #787FF6;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line */
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+}
+
+.content {
+  display: none;
+}
+
+/*DARK MODE DESIGN FOR PROJECT PAGE START HERE*/
+.dark-mode {
+  background: #232427;
+}
+
+.dark-mode nav {
+  background: #232427;
+  border: none;
+  box-shadow: -7px -7px 17px black, 7px 7px 17px black
+    /*rgba(255, 255, 255, 0.2)*/
+  ;
+}
+
+.dark-mode .BACK {
+
+  background: #232427;
+}
+
+.dark-mode #languageSelect {
+  /*border:2px solid black;*/
+  background: #232427;
+  box-shadow: -5px -5px 15px black, 5px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode footer {
+  border: none;
+  background: #232427;
+  box-shadow: -5px -5px 15px black, 5px 5px 15px rgba(255, 255, 255, 0.2);
+
+  color: white;
+}
+
+.dark-mode button:hover {
+  box-shadow: none;
+}
+
+.dark-mode .projects {
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+
+/*DARK MODE DESIGN FOR PROJECT PAGE ENDS HERE*/
+
+/*ABOUT ME PAGE DESIGN START HERE*/
+.aboutme {
+  margin-top: 100px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+}
+
+.AC {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.AI {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  width: 250px;
+  background-image: url('me.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 250px;
+  z-index: 50;
+
+}
+.AT {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  background: #787FF6;
+  height: 200px;
+}
+.at{
+  margin:20px auto;
+  text-align:center;
+  margin-left:100px;
+  color: white;
+}
+.at h1{
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.at p{
+  margin-right:10px;
+  margin-top:10px;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.SA{
+  height: 250px;
+}
+.GAP{
+  margin-top:50px;
+}
+.SAT{
+  margin-left:10px;
+}
+.SAT details {
+  text-align:left;
+  margin-top:5px;
+  
+}
+.SAT details summary{
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.dark-mode .aboutme{
+  box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+}
+/* SOCIAL MEDIA DESIGN START HERE */
+.foot{
+  text-align:left;
+}
+.Social {
+  color: #0087ca;
+  margin:10px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;  
+}
+.Social span{
+  font-size:20px;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+.cop{
+  text-align: center;
+  font-family: 'Protest Guerrilla', sans-serif;
+  width:100%;
+  border:1px solid black;
+}
+
+.Social::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.Social:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.fcon{
+  display:flex; 
+  padding:5px;
+}
+.slink-container{
+  width:50%;
+}
+.address{
+  width:50%;
+}
+.address a{
+  font-size:20px;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+/* SOCIAL MEDIA DESIGN ENDS HERE*/
+
+/*About PAGE DESIGN ENDS HERE*/

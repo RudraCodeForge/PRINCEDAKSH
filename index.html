@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>PRINCEDAKSH</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <style>
+    /* The switch - the box around the slider */
+    .switch {
+      display: block;
+      --width-of-switch: 3.5em;
+      --height-of-switch: 2em;
+      /* size of sliding icon -- sun and moon */
+      --size-of-icon: 1.4em;
+      /* it is like a inline-padding of switch */
+      --slider-offset: 0.3em;
+      position: relative;
+      width: var(--width-of-switch);
+      height: var(--height-of-switch);
+      margin: 10px;
+
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #f4f4f5;
+      transition: .4s;
+      border-radius: 30px;
+      box-shadow: -7px -7px 17px #fff, 7px 7px 17px rgba(70, 70, 70, 0.15);
+    }
+
+    .dark-mode .slider {
+      box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: var(--size-of-icon, 1.4em);
+      width: var(--size-of-icon, 1.4em);
+      border-radius: 20px;
+      left: var(--slider-offset, 0.3em);
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+      transition: .4s;
+    }
+
+    .dark-mode .slider {
+      background-color: #303136;
+    }
+
+    .dark-mode .slider:before {
+      left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+      background: white;
+      box-shadow: -7px -7px 17px black, 7px 7px 17px rgba(255, 255, 255, 0.2);
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--LOADER DESIGN START HERE -->
+  <!--<div id="loader">
+    <h1><i class="fa-solid fa-utensils"></i> EAT</h1>
+    <h1><i class="fa-solid fa-bed"></i> SLEEP</h1>
+    <h1><i class="fa-solid fa-code"></i> CODE</h1>
+    <h1><i class="fa-solid fa-repeat"></i> REPEAT</h1>
+  </div>-->
+  <!-- Loader design Ends here -->
+
+  <!-- NAVBAR DESIGN START HERE -->
+  <section class="navbar">
+    <nav>
+      <div class="logo">
+        PRINCE<b>DAKSH</b>
+      </div>
+      <div class="hamburger" onclick="menu()">
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+      </div>
+      <div class="laptopmenu">
+        <ul>
+          <li><a href="#" onclick="RELOAD()"><i class="fa-solid fa-house"></i> HOME</a></li>
+          <li><a href="aboutme.html"><i class="fa-solid fa-address-card"></i> ABOUT ME</a></li>
+          <li><a href="Project.html"><i class="fa-solid fa-file-code"></i> PROJECT</a></li>
+          <li><a href="#">
+              <i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
+          <li><a href="mailto: jitandradaksh533@gmail.com?subject=From%20Your%20Website"><i
+                class="fa-solid fa-envelope"></i> CONTACT ME</a></li>
+          <label class="switch toggle-button" onclick="toggleMode()">
+            <input type="checkbox" class="toggle-button" onclick="toggleMode()">
+            <span class="slider"></span>
+          </label>
+        </ul>
+
+      </div>
+    </nav>
+    <div class="mobilemenu">
+      <ul class="links">
+        <label class="switch toggle-button" onclick="toggleMode()">
+          <input type="checkbox" class="toggle-button" onclick="toggleMode()">
+          <span class="slider"></span>
+        </label>
+        <li><a href="#" onclick="RELOAD()"><i class="fa-solid fa-house"></i> HOME</a></li>
+        <li><a href="aboutme.html"><i class="fa-solid fa-address-card"></i> ABOUT ME</a></li>
+        <li><a href="Project.html"><i class="fa-solid fa-file-code"></i> PROJECT</a></li>
+        <li><a href="#">
+            <i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
+        <li><a href="mailto: jitandradaksh533@gmail.com?subject=From%20Your%20Website"><i
+              class="fa-solid fa-envelope"></i> CONTACT ME</a></li>
+        <li><a href="https://www.buymeacoffee.com/rudra21"><i class="fa-solid fa-mug-hot"></i> BUY ME CUP OF COFFEE</a></li>
+      </ul>
+    </div>
+  </section>
+  <!-- NAVBAR DESIGN ENDS HERE -->
+
+  <!-- LANDING PAGE START HERE -->
+  <section id="try">
+    <section id="landing">
+      <div class="image2">
+        <img src="pic.png" style="width:150px;" loading="lazy" class="pic">
+      </div>
+      <div class="text">HELLO IT'S ME<h1>
+          PRINCE DAKSH
+        </h1>AND I'M A <span id="element"></span>
+        <p> "The best error message is the one<br> that never shows up." - Thomas Fuchs
+        </p><br>
+        <div class="landing-button">
+          <a href="aboutme.html">KNOW MORE</a>
+          <a href="#" class="HIRE">HIRE ME</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="data">
+          <img src="pic2.jpg" />
+          <h2>PRINCE DAKSH<br><span>WEB DEVELOPER</span></h2>
+          <a href="" class="btn">HIRE ME</a>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- LANDING PAGE ENDS HERE -->
+
+  <!-- SKILLS SECTION STARTS HERE
+  <section class="SKILLS">
+    <h1>SKILLS</h1>
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">HTML</span>
+        <span class="SNAME" style="margin-right:9%">90% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 90%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">CSS</span>
+        <span class="SNAME" style="margin-right:14%">85% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 85%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">JAVASCRIPT</span>
+        <span class="SNAME" style="margin-right:29%">70% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 70%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">PYTHON</span>
+        <span class="SNAME" style="margin-right:12%">87% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 87%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">C++</span>
+        <span class="SNAME" style="margin-right:10%">89% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 89%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">C PROGRAMMING</span>
+        <span class="SNAME" style="margin-right:5%">94% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 94%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">JAVA</span>
+        <span class="SNAME" style="margin-right:59%">40% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 40%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">DIVOPS</span>
+        <span class="SNAME" style="margin-right:34%">65% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 65%;"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="assum">
+        <span class="SNAME">LINUX</span>
+        <span class="SNAME" style="margin-right:49%">50% <i class="fa-solid fa-arrow-down"></i></span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 50%;"></div>
+      </div>
+    </div>
+  </section>
+   SKILLS SECTION ENDS HERE -->
+
+  <!-- CONNECT FORM SECTION STARTS HERE-->
+
+  <section class="contact">
+    <h2>CONNECT ME</h2>
+    <form id="contact-form">
+      <br><input type="text" id="name" name="name" placeholder="ENTER YOUR NAME" required><br><br>
+
+      <input type="email" id="email" name="email" placeholder="ENTER YOUR EMAIL" required><br>
+      <br>
+      <textarea id="message" name="message" rows="4" placeholder="ENTER YOUR MESSAGE...." required></textarea><br><br>
+
+      <button type="submit" class="SForm">Submit</button>
+      <button onclick="clearForm()" class="SForm">Clear</button>
+    </form>
+    </section>
+  <!-- CONNECT FORM SECTION ENDS HERE -->
+
+  <!-- FOOTER STARTS HERE -->
+  <footer>&copy COPYRIGHT BY PRINCE DAKSH</footer>
+  <!-- FOOTER ENDS HERE -->
+  <script src="script.js"></script>
+
+  <!-- JS CODE FOR FORM DATA TRANSFER STARTS HERE -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("-E5HO-T9pUBXkXIk5");
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var formData = {
+        to_name: "PRINCE DAKSH",
+        name: this.name.value,
+        email_id: this.email.value,
+        message: this.message.value
+      };
+
+      emailjs.send("service_81xo1t9", "template_od3tksj", formData)
+        .then(function (response) {
+          console.log('Success!', response.status, response.text);
+          alert('Message sent successfully!');
+          document.getElementById('contact-form').reset();
+        })
+        .catch(function (error) {
+          console.log('Failed!', error);
+          alert('Message failed to send. Please try again later.');
+        });
+    });
+  </script>
+  <!-- JS CODE FOR FORM TRANSFER ENDS HERE -->
+
+  <!-- JS CODE FOR AUTO-TYPEING STARTs -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['FULLSTACK DEVELOPER.'],
+      typeSpeed: 550,
+    });
+  </script>
+  <!-- JS CODE FOR AUTO-TYPING ENDS HERE -->
+</body>
+
+</html>
